@@ -22,13 +22,14 @@ A simple project to understand how PubNub SDK & Chat Engine can be integrated wi
   cd pradeepdm.github.io 
 
 ```  
-  3. Run the `https://pradeepdm.github.io/index.html`
+  ### Run the application
+  1. Run the `https://pradeepdm.github.io/index.html`
    
-  4. Click on the `Search Now !!!` present in the index.html. The application will now be redirected to a new page to locate and display the drug stores present near by.
+  2. Click on the `Search Now !!!` present in the index.html. The application will now be redirected to a new page to locate and display the drug stores present nearby.
   
-  5. Run the `https://pradeepdm.github.io/pharmacy-vendor-cvs.html` from a different machine or in the Browser Incognito Mode if you are running it in the same machine (to use chat box) and go online using the given button.
+  3. Run the `https://pradeepdm.github.io/pharmacy-vendor-cvs.html` from a different machine or in the Browser Incognito Mode if you are running it on the same machine (to use chat box) and go online using the given button.
   
-  6. Click on the online drug stores (google markers with Black pin location) from the find Pharmacy webpage to see the store details and initiate a chat with the pharmacist.
+  4. Click on the online drug stores (google markers with Black pin location) from the find Pharmacy webpage to see the store details and initiate a chat with the pharmacist.
   
 ## Workflow
   There are two users of this application. 
