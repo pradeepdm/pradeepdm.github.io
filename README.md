@@ -15,14 +15,14 @@ A simple project to understand how PubNub SDK & Chat Engine can be integrated wi
   ### Setup
   1. Clone repository 
   ```
-  https://github.com/pradeepdm/pradeepdm.github.io
+  https://github.com/pradeepdm/pradeepdm.github.io.git
   ```
   2. Switch to the project directory
   ``` 
   cd pradeepdm.github.io 
 
 ```  
-  3. Run the `https://github.com/pradeepdm/pradeepdm.github.io/index.html`
+  3. Run the `https://pradeepdm.github.io/index.html`
    
   4. Click on the `Search Now !!!` present in the index.html. The application will now be redirected to a new page to locate and display the drug stores present near by.
   
