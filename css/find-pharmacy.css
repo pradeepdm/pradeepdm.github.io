@@ -1,0 +1,76 @@
+html, body, #map {
+    height: 100%;
+    margin: 5px;
+}
+
+#map_container {
+    position: relative;
+}
+
+#map {
+    overflow: hidden;
+    padding-bottom: 20%;
+    padding-top: 20px;
+    position: relative;
+}
+
+.drug-store-header {
+    padding: 8px;
+    height: 8em;
+    background-color: white;
+    text-align: center;
+}
+
+.home {
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border: #F3F3F3 1px solid;
+    border-radius: 2px;
+}
+
+.home:hover {
+    color: #1560FB;
+    background-color: white;
+    cursor: pointer;
+}
+
+.portfolio-header > h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+body {
+    background-color: #474747;
+}
+
+h1 {
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px;
+    color: #000;
+    text-shadow: 0 2px 3px #555555;
+    font-family: Tahoma;
+}
+
+.container {
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+.modal-header {
+    background-color: #86BB71;
+    height: 60px;
+}
+
+.gm-style .gm-style-iw {
+
+    font-weight: 200;
+    font-size: 15px;
+    overflow: hidden;
+    color: black;
+    font-style: inherit;
+}

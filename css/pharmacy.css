@@ -1,0 +1,24 @@
+#heading {
+    text-align: center;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 5px;
+}
+
+#status {
+    padding: 50px;
+}
+
+.container {
+    margin-top: 25px;
+    background-color: #1ABC9C;
+}
+
+#status-text {
+    text-align: center;
+}
+
+
