@@ -45,6 +45,10 @@ A simple project to understand how PubNub SDK & Chat Engine can be integrated wi
   This list is displayed on the Google Maps. Users will be able to find both online and offline stores. The online stores are distinguished using a different Google Marker (Black pin location).
   When the user clicks on one of the online drug stores, they can see the details and initiate an chat with the pharmacist.
   At this moment, they are connected to the pharmacist and presented with a chat box modal.
+  
+  ####
+  Please find the link to the Live Demo:
+   `https://youtu.be/x97JmdDOgdo`
 
 ## API Reference 
    1.[PubNub](https://www.pubnub.com/docs)
@@ -67,3 +71,4 @@ A simple project to understand how PubNub SDK & Chat Engine can be integrated wi
 
 ## License
 MIT
+
