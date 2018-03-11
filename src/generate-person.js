@@ -12,7 +12,7 @@ var generatePerson = function(online) {
 
     var person = {};
 
-    var names = "Benjamin Riaz Hecham Bhavana Madison".split(" ");
+    var names = "Benjamin Madison".split(" ");
 
     var avatars = [
         'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg',
