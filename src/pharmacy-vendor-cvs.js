@@ -14,11 +14,29 @@ var pubnub = new PubNub({
     publishKey: 'pub-c-146542ff-637d-43fa-a28a-cad0dbaf697e'
 });
 
-
+var cvsPharmacyLatitude = null;
+var cvsPharmacyLongitude = null;
+var cvsPharmacyLocationAdjustment = 0.02;
 
 $(document).ready(function () {
 
     $('#chat-box-cvs').hide();
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
+    } else {
+        alert("Geolocation error !!");
+    }
+
+    function foundLocation(position) {
+        cvsPharmacyLatitude = position.coords.latitude;
+        cvsPharmacyLongitude = position.coords.longitude;
+    }
+
+
+    function noLocation() {
+        alert("Please provide access to Global Positioning System");
+    }
+
     $('#go-online-cvs').on('click', function () {
 
         var statusText = document.querySelector('#status-text');
@@ -27,13 +45,12 @@ $(document).ready(function () {
             {
                 message: {
 
-                    // This refers to the pharmacy location on the Google Map. I have hardcoded
-                    // the value here just for this example.
-                    // Ideally latitude and longitude values should be taken
-                    // using navigator.geolocation and google maps apis
-
-                    "latitude": "32.708282",
-                    "longitude": "-117.155739"
+                    // This refers to the pharmacy location on the Google Map.
+                    // The cvsPharmacyLocationAdjustment is to adjust the pharmacy location so that
+                    // it doesn't overlap with the current location when running from the same machine.
+                    // Current location is fetched using navigator.geolocation and Google map apis
+                    "latitude": cvsPharmacyLatitude - cvsPharmacyLocationAdjustment,
+                    "longitude": cvsPharmacyLongitude
                 },
                 channel: 'findPharmacyCvs'
             },

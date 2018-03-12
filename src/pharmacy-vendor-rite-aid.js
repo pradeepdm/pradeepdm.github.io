@@ -12,22 +12,45 @@ var pubnub = new PubNub({
     publishKey: 'pub-c-146542ff-637d-43fa-a28a-cad0dbaf697e'
 });
 
+var riteAidPharmacyLatitude = null;
+var riteAidPharmacyLongitude = null;
+var riteAidPharmacyLocationAdjustment = 0.04;
+
+
 $(document).ready(function () {
 
     $('#chat-box-rite-aid').hide();
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
+    } else {
+        alert("Geolocation error !!");
+    }
+
+    function foundLocation(position) {
+        riteAidPharmacyLatitude = position.coords.latitude;
+        riteAidPharmacyLongitude = position.coords.longitude;
+    }
+
+
+    function noLocation() {
+        alert("Please provide access to Global Positioning System");
+    }
+
+
     $('#go-online-rite').on('click', function () {
 
         var statusText = document.querySelector('#status-text');
 
         pubnub.publish(
             {
-                // This refers to the pharmacy location on the Google Map. I have hardcoded
-                // the value here just for this example.
-                // Ideally latitude and longitude values should be taken
-                // using navigator.geolocation and google maps apis
+                // This refers to the pharmacy location on the Google Map.
+                // The riteAidPharmacyLocationAdjustment is to adjust the pharmacy location so that
+                // it doesn't overlap with the current location when running from the same machine.
+                // Current location is fetched using navigator.geolocation and Google map apis
                 message: {
-                    "latitude": "32.741599",
-                    "longitude": "-117.053480"
+                    "latitude": riteAidPharmacyLatitude - riteAidPharmacyLocationAdjustment,
+                    "longitude": riteAidPharmacyLongitude
                 },
                 channel: 'findPharmacyRiteAid'
             },
