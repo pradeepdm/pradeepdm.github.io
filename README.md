@@ -1,8 +1,6 @@
 # Find Pharmacy in Real time
 ## Synopsis
- This application lets owners of pharmacy stores interact with the consumers 
- in real time using PubNub. It lets customers find pharmacies using google maps 
- and chat with the pharmacist in real time.
+ This application connects the customers with pharmacies using Google maps and enables the users to chat with the pharmacist in real time and get the right medicine. It also enables pharmacists to build their digital presence and provide better customer servicee.
  
 ## Motivation
 A simple project to understand how PubNub SDK & Chat Engine can be integrated with Google Maps and places API to build a real time application that connects customers to pharmacists.
@@ -33,18 +31,18 @@ A simple project to understand how PubNub SDK & Chat Engine can be integrated wi
   
 ## Workflow
   There are two users of this application. 
-  - Pharmacist or Drug Store Owners
-  - Customers (Customers in search of Online drug store)
+  - Pharmacist or Drug store owners
+  - Customers who are in search of online drug stores
   
-  ### Usecase - 1 (For pharmacists/ drug store owners)
-  Drug stores can use this application to interact with the customers in real time who need more information about the drug/medicine. To do this, a drug store owner/ pharmacist will visit this application and come online by using the interface provided by the application. 
-  Once they go online, they will be presented with a chat window where they can send and recieve messages from customers.
+  ### Use case - 1 (For pharmacists / Drug store owners)
+  Drug stores can use this application to interact with the customers in real time and assist them with their queries. To  do this, a drug store owner/ pharmacist will visit this application and come online by using the interface provided by the application. 
+  Once they go online, they will be presented with a chat window where they can send and receive messages from customers.
   
-  ### Usecase - 2 (Customers in search of online drug store)
-  Customers can visit this application to find the drug stores. Once the user hits the search button, they will be presented with the all the pharmacies based on their current location.
-  This list is displayed on the Google Maps. Users will be able to find both online and offline stores. The online stores are distinguished using a different Google Marker (Black pin location).
-  When the user clicks on one of the online drug stores, they can see the details and initiate an chat with the pharmacist.
-  At this moment, they are connected to the pharmacist and presented with a chat box modal.
+  ### Use case - 2 (Customers in search of online drug store)
+  Customers can visit this application to find the drug stores. Once the user hits the search button, they will be presented with the pharmacies that are present near by based on their current location.
+  This can be seen on the Google Maps and the user will be able to find both online and offline stores. The online stores are distinguished using the Black pin Google Marker.
+  When the user clicks on one of the online drug stores, they can see the details and initiate a chat with the pharmacist.
+  At this moment, they are connected with the pharmacist and presented with a chat window..
   
   ####
   Please find the link to the Live Demo:
