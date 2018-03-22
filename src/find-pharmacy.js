@@ -15,11 +15,18 @@ var pubnub = new PubNub({
 
 var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png';
 
+
+var options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+};
+
 function initMap() {
 
     // Fetching the current location inorder to fine the near by restaurants using the google Places API
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
+        navigator.geolocation.getCurrentPosition(foundLocation, noLocation, options);
     } else {
         alert("Geolocation is not supported by this browser.");
     }
@@ -105,6 +112,10 @@ function initMap() {
             })
         }
 
+        // subscribe to the channel that is published through PubNub publish()
+        pubnub.subscribe({
+            channels: ['findPharmacyCvs','findPharmacyRiteAid']
+        });
 
         // Adding Listener to get notification as and when the pharmacy is open and published.
         pubnub.addListener({
@@ -137,10 +148,7 @@ function initMap() {
                 })
             }
         });
-        // subscribe to the channel that is published through PubNub publish()
-        pubnub.subscribe({
-            channels: ['findPharmacyCvs','findPharmacyRiteAid']
-        });
+
     }
 
     function noLocation() {
